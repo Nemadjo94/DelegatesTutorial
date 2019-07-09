@@ -1,0 +1,34 @@
+﻿Sta je delagat?
+
+Delegat je objekat koji moze da referencuje metodu
+
+Kada kreiramo delagate, mi kreiramo objekte koji mogu da sadrze referencu na metodu.
+To znaci da delegat poziva metodu koju referise.
+
+Isti delegat se moze iskoristiti da pozove vise metoda promenom imena metoda na run time-u.
+Ali metoda (instanca ili static) mora se poklapati sa signaturom i return tipom.
+
+Sta je Multicast delegat?
+
+To je delegat koji referise vise metoda.
+Pozivanje objekta delegata automatski poziva sve metode koje su referisane unutar ovog delegata.
+Metode se kace koriscenjem += ili otkace -= na instancu delegata.
+
+Povratni tip mora biti void. Nijedan od parametara tipa delegat ne sme biti tip delegat i ne sme biti deklarisan kao output parametar
+koriscenjem out keyword-a
+
+Moguce je kreiranje multicast delegata spajanjem dva delegata. Delagati se dodaju u invocation listu i pozivaju se po svom redosledu.
+
+U slucaju da delegat vraca vrednost, vrednost vracena od strane poslednjeg metoda postaje povratna vrednost svih invokacija delegatskih
+metoda.
+
+Kada da koristimo delegate?
+
+-Kada se koristi eventing desing patern
+-Kada je pozeljno enkapsulirati staticni metod
+-Kada pozivacu ne treba ili ne zelimo da mu damo pristup propertijima, metodama ili interfejsima na objektu koji implementuje metod
+-Kada klasu mozda treba vise od jedne implementacije metoda
+-Za abstraktciju i enkapsuliranje metoda
+-Callback mehanizam
+-Asinhrono programiranje
+-Sekvencionalno programiranje
